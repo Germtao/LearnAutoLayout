@@ -18,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		24A7EE6387FB2302F2A4E545 /* Pods_LearnAutoLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnAutoLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B0432A125FF647F003E5995 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3BBE758E223F8B3D00B4DEF7 /* LearnAutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnAutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BBE7591223F8B3D00B4DEF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BBE7593223F8B3D00B4DEF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		3BBE7585223F8B3D00B4DEF7 = {
 			isa = PBXGroup;
 			children = (
+				3B0432A125FF647F003E5995 /* README.md */,
 				3BBE75A3223F8CDD00B4DEF7 /* .gitignore */,
 				3BBE7590223F8B3D00B4DEF7 /* LearnAutoLayout */,
 				3BBE758F223F8B3D00B4DEF7 /* Products */,
