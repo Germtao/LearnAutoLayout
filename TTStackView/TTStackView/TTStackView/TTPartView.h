@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) TTPartMaker *maker;
 
-+ (TTPartView *)createView:(void(^)(TTPartMaker *_Nonnull))partMaker;
++ (TTPartView *)createView:(void(^)(TTPartMaker *make))partMaker;
 
 @end
 

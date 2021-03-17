@@ -23,7 +23,7 @@ typedef NS_ENUM(NSUInteger, TTAssembleArrang) {
     TTAssembleArrang_Vertical
 };
 
-typedef void(^ParsingFormatStringCompleteBlock)(TTAssembleView * _Nonnull);
+typedef void(^ParsingFormatStringCompleteBlock)(TTAssembleView * _Nullable assembleView);
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -47,14 +47,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) ParsingFormatStringCompleteBlock _Nullable parsingCompletion;
 
 
-- (TTAssembleMaker * _Nonnull (^)(TTAssembleView * _Nonnull))addAssembleView;
-- (TTAssembleMaker * _Nonnull (^)(TTPartView * _Nonnull))addPartView;
-- (TTAssembleMaker * _Nonnull (^)(UIView * _Nonnull))addView;
+- (TTAssembleMaker * (^)(TTAssembleView *))addAssembleView;
+- (TTAssembleMaker * (^)(TTPartView *))addPartView;
+- (TTAssembleMaker * (^)(UIView *))addView;
 
-- (TTAssembleMaker * _Nonnull (^)(CGFloat))paddingEqualTo;
-- (TTAssembleMaker * _Nonnull (^)(TTAssembleAlignment))alignmentEqualTo;
-- (TTAssembleMaker * _Nonnull (^)(TTAssembleArrang))arrangEqualTo;
-- (TTAssembleMaker * _Nonnull (^)(NSUInteger))extendWithEqualTo;
+- (TTAssembleMaker * (^)(CGFloat))paddingEqualTo;
+- (TTAssembleMaker * (^)(TTAssembleAlignment))alignmentEqualTo;
+- (TTAssembleMaker * (^)(TTAssembleArrang))arrangEqualTo;
+- (TTAssembleMaker * (^)(NSUInteger))extendWithEqualTo;
 
 @end
 

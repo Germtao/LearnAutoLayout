@@ -18,8 +18,8 @@
 
 @implementation TTAssembleView
 
-+ (instancetype)createView:(void (^)(TTAssembleMaker * _Nonnull))assembleMaker {
-    TTAssembleView *assembleView = [[TTAssembleView alloc] init];
++ (TTAssembleView *)createView:(void (^)(TTAssembleMaker * _Nonnull))assembleMaker {
+    TTAssembleView *assembleView = [[self alloc] init];
     assembleView.maker = [[TTAssembleMaker alloc] init];
     assembleMaker(assembleView.maker);
     [assembleView buildAssembleView];
@@ -28,7 +28,7 @@
 
 #pragma mark - public
 
-+ (instancetype)formatString:(NSString *)string objectsMap:(NSDictionary *)objsMap {
++ (TTAssembleView *)formatString:(NSString *)string objectsMap:(NSDictionary *)objsMap {
     return [TTAssembleView createViewWithFormatString:string objectsMap:objsMap completion:nil];
 }
 
@@ -46,7 +46,7 @@
     });
 }
 
-+ (instancetype)createViewWithFormatString:(NSString *)string
++ (TTAssembleView *)createViewWithFormatString:(NSString *)string
                                 objectsMap:(NSDictionary *)objsMap
                                 completion:(ParsingFormatStringCompleteBlock _Nullable)completion {
     // 根据格式化字符串来
@@ -70,6 +70,7 @@
     }
     
     if (completion) {
+        TTAssembleView __block *view;
         dispatch_async(dispatch_get_main_queue(), ^{
             NSArray *strongTokens = tokens;
             NSDictionary *strongObjsMap = objsMap;
@@ -77,9 +78,11 @@
                 if (strongTokens.count > 0) {
                     [TTAssembleView createViewWithFormatArray:strongTokens objectsMap:strongObjsMap completion:completion];
                 }
+            } else {
+                view = [[TTAssembleView alloc] init];
             }
         });
-        return [[TTAssembleView alloc] init];
+        return view;
     } else {
         return [TTAssembleView createViewWithFormatArray:tokens objectsMap:objsMap completion:completion];
     }
@@ -200,7 +203,8 @@
         }
         
         // 遍历解析到的assemble view的属性
-        NSMutableDictionary *keyValuePropertyMap = [TTAssembleView parsingPropertyFormatArray:assembleProperties objectsMap:objsMap];
+        NSMutableDictionary *keyValuePropertyMap = [TTAssembleView parsingPropertyFormatArray:assembleProperties
+                                                                                   objectsMap:objsMap];
         NSArray *keys = [keyValuePropertyMap allKeys];
         for (NSString *key in keys) {
             if ([key isEqualToString:@"padding"]) {
@@ -273,11 +277,11 @@
             } else if ([obj isKindOfClass:[TTPartView class]]) {
                 // 大小
                 if (partView.maker.size.width > 0) {
-                    make.width.equalTo(@(partView.maker.size.width));
+                    make.width.mas_equalTo(partView.maker.size.width);
                 }
                 
                 if (partView.maker.size.height > 0) {
-                    make.height.equalTo(@(partView.maker.size.height));
+                    make.height.mas_equalTo(partView.maker.size.height);
                 }
                 
                 // 根据排列方式是否填充满，如果设置填充，对应的宽高需要设置为0
@@ -420,11 +424,11 @@
 
 /// 格式化字符串创建Part View
 + (TTPartView *)createPartViewWithFormatArray:(NSMutableArray *)array objectsMap:(NSDictionary *)objsMap {
-    return [TTPartView createView:^(TTPartMaker *make) {
+    return [TTPartView createView:^(TTPartMaker * _Nonnull make) {
         NSArray *allObjKeys = objsMap.allKeys;
         
-        NSMutableArray *properties = [NSMutableArray array];
-        NSMutableArray *assembleArray = [NSMutableArray array];
+        NSMutableArray *properties = [NSMutableArray array];    // 属性
+        NSMutableArray *assembleArray = [NSMutableArray array]; // assemble view
         
         BOOL isParsingProperty = NO; //正在处理属性
         BOOL isParsingAssemble = NO; //正在处理assemble view数组
@@ -453,8 +457,8 @@
                 isParsingProperty = YES;
             }
             if (isParsingProperty) {
-                if ([token isEqualToString:@"["] || [token isEqualToString:@"]"]) {
-                    // 这里就不用记录这两个符号了
+                if ([token isEqualToString:@"("] || [token isEqualToString:@")"]) {
+                    // 这里就不用记录这两个符号了 ()
                 } else {
                     [properties addObject:token];
                 }
@@ -554,8 +558,7 @@
                 // 设置控件通用
                 if ([key isEqualToString:@"backColor"]) {
                     if ([map[key] isKindOfClass:[UIColor class]]) {
-                        UIColor *color = (UIColor *)map[key];
-                        make.backColorIs(color);
+                        make.backColorIs((UIColor *)map[key]);
                     } else {
                         make.backColorHexStringIs(map[key]);
                     }
@@ -571,8 +574,7 @@
                 }
                 if ([key isEqualToString:@"backBorderColor"]) {
                     if ([map[key] isKindOfClass:[UIColor class]]) {
-                        UIColor *color = (UIColor *)map[key];
-                        make.backBoardColorIs(color);
+                        make.backBoardColorIs((UIColor *)map[key]);
                     } else {
                         make.backBoardColorHexStringIs(map[key]);
                     }
@@ -651,7 +653,7 @@
     NSString *parsingKey = @"";
     BOOL isParsingObjsMap = NO;
     
-    NSMutableDictionary *keyValueProperties = [NSMutableDictionary dictionary];
+    NSMutableDictionary *keyValuePropertyMap = [NSMutableDictionary dictionary];
     for (NSString *str in array) {
         // 属性
         if (!isParsingOneProperty) {
@@ -671,15 +673,28 @@
                 // 处理objsMap传入的属性
                 for (NSString *key in allObjKeys) {
                     if ([key isEqualToString:str]) {
-                        keyValueProperties[parsingKey] = objsMap[key];
+                        keyValuePropertyMap[parsingKey] = objsMap[key];
                     }
                 }
             } else {
-                keyValueProperties[parsingKey] = str;
+                keyValuePropertyMap[parsingKey] = str;
             }
         }
     }
-    return keyValueProperties;
+    return keyValuePropertyMap;
+}
+
+/// 宏
+NSString *ASS(NSString *format, ...) {
+    va_list args;
+    if (format) {
+        va_start(args, format);
+        
+        NSString *str = [[NSString alloc] initWithFormat:format arguments:args];
+        va_end(args);
+        return str;
+    }
+    return @"";
 }
 
 @end

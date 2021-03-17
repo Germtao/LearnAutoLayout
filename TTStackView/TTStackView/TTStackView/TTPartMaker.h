@@ -101,50 +101,50 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 布局
 
-- (TTPartMaker * _Nonnull (^)(UIView * _Nonnull))customViewEqualTo;
-- (TTPartMaker * _Nonnull (^)(CGSize))sizeEqualTo;
-- (TTPartMaker * _Nonnull (^)(BOOL))isFillEqualTo;
-- (TTPartMaker * _Nonnull (^)(CGFloat))paddingEqualTo;
-- (TTPartMaker * _Nonnull (^)(TTPartAlignment))partAlignmentEqualTo;
-- (TTPartMaker * _Nonnull (^)(CGFloat))alignmentMarginEqualTo;
-- (TTPartMaker * _Nonnull (^)(TTPartAlignment))ignoreAlignmentEqualTo;
-- (TTPartMaker * _Nonnull (^)(TTPartPriority))CRPriorityEqualTo;
-- (TTPartMaker * _Nonnull (^)(CGFloat))minWidthEqualTo;
-- (TTPartMaker * _Nonnull (^)(CGFloat))maxWidthEqualTo;
+- (TTPartMaker * (^)(UIView *))customViewEqualTo;
+- (TTPartMaker * (^)(CGSize))sizeEqualTo;
+- (TTPartMaker * (^)(BOOL))isFillEqualTo;
+- (TTPartMaker * (^)(CGFloat))paddingEqualTo;
+- (TTPartMaker * (^)(TTPartAlignment))partAlignmentEqualTo;
+- (TTPartMaker * (^)(CGFloat))alignmentMarginEqualTo;
+- (TTPartMaker * (^)(TTPartAlignment))ignoreAlignmentEqualTo;
+- (TTPartMaker * (^)(TTPartPriority))CRPriorityEqualTo;
+- (TTPartMaker * (^)(CGFloat))minWidthEqualTo;
+- (TTPartMaker * (^)(CGFloat))maxWidthEqualTo;
 
 #pragma mark - 控件属性
 
 #pragma mark - 通用
 
-- (TTPartMaker * _Nonnull (^)(UIColor * _Nonnull))backColorIs;
-- (TTPartMaker * _Nonnull (^)(NSString * _Nonnull))backColorHexStringIs;
-- (TTPartMaker * _Nonnull (^)(UIColor * _Nonnull))backBoardColorIs;
-- (TTPartMaker * _Nonnull (^)(NSString * _Nonnull))backBoardColorHexStringIs;
-- (TTPartMaker * _Nonnull (^)(CGFloat))backBoardWidthIs;
-- (TTPartMaker * _Nonnull (^)(CGFloat))backBoardRadiusIs;
-- (TTPartMaker * _Nonnull (^)(CGFloat))backPaddingHorizontalIs;
-- (TTPartMaker * _Nonnull (^)(CGFloat))backPaddingVerticalIs;
-- (TTPartMaker * _Nonnull (^)(UIButton * _Nonnull))buttonIs;
-- (TTPartMaker * _Nonnull (^)(UIColor * _Nonnull))buttonHighlightColorIs;
+- (TTPartMaker * (^)(UIColor *))backColorIs;
+- (TTPartMaker * (^)(NSString *))backColorHexStringIs;
+- (TTPartMaker * (^)(UIColor *))backBoardColorIs;
+- (TTPartMaker * (^)(NSString *))backBoardColorHexStringIs;
+- (TTPartMaker * (^)(CGFloat))backBoardWidthIs;
+- (TTPartMaker * (^)(CGFloat))backBoardRadiusIs;
+- (TTPartMaker * (^)(CGFloat))backPaddingHorizontalIs;
+- (TTPartMaker * (^)(CGFloat))backPaddingVerticalIs;
+- (TTPartMaker * (^)(UIButton *))buttonIs;
+- (TTPartMaker * (^)(UIColor *))buttonHighlightColorIs;
 
 #pragma mark - UILabel
 
-- (TTPartMaker * _Nonnull (^)(NSString * _Nonnull))textIs;
-- (TTPartMaker * _Nonnull (^)(UIFont * _Nonnull))fontIs;
-- (TTPartMaker * _Nonnull (^)(CGFloat))fontSizeIs;
-- (TTPartMaker * _Nonnull (^)(UIColor * _Nonnull))colorIs;
+- (TTPartMaker * (^)(NSString *))textIs;
+- (TTPartMaker * (^)(UIFont *))fontIs;
+- (TTPartMaker * (^)(CGFloat))fontSizeIs;
+- (TTPartMaker * (^)(UIColor *))colorIs;
 /// 16 进制颜色
-- (TTPartMaker * _Nonnull (^)(NSString * _Nonnull))colorHexStringIs;
+- (TTPartMaker * (^)(NSString *))colorHexStringIs;
 /// 颜色类型
-- (TTPartMaker * _Nonnull (^)(TTPartColor))colorTypeIs;
+- (TTPartMaker * (^)(TTPartColor))colorTypeIs;
 
 #pragma mark - UIImageView
 
-- (TTPartMaker * _Nonnull (^)(UIImage * _Nonnull))imageIs;
-- (TTPartMaker * _Nonnull (^)(NSString * _Nonnull))imageNameIs;
-- (TTPartMaker * _Nonnull (^)(NSString * _Nonnull))imageUrlIs;
-- (TTPartMaker * _Nonnull (^)(UIImage * _Nonnull))imagePlaceholderIs;
-- (TTPartMaker * _Nonnull (^)(NSString * _Nonnull))imagePlaceholderNameIs;
+- (TTPartMaker * (^)(UIImage *))imageIs;
+- (TTPartMaker * (^)(NSString *))imageNameIs;
+- (TTPartMaker * (^)(NSString *))imageUrlIs;
+- (TTPartMaker * (^)(UIImage *))imagePlaceholderIs;
+- (TTPartMaker * (^)(NSString *))imagePlaceholderNameIs;
 
 @end
 

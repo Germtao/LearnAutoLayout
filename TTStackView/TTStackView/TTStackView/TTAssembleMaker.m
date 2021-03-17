@@ -10,54 +10,56 @@
 
 @implementation TTAssembleMaker
 
-- (TTAssembleMaker * _Nonnull (^)(TTAssembleView * _Nonnull))addAssembleView {
+- (TTAssembleMaker * (^)(TTAssembleView *))addAssembleView {
     return ^(TTAssembleView *assembleView) {
         [self.subViews addObject:assembleView];
         return self;
     };
 }
 
-- (TTAssembleMaker * _Nonnull (^)(TTPartView * _Nonnull))addPartView {
+- (TTAssembleMaker * (^)(TTPartView *))addPartView {
     return ^(TTPartView *partView) {
         [self.subViews addObject:partView];
         return self;
     };
 }
 
-- (TTAssembleMaker * _Nonnull (^)(UIView * _Nonnull))addView {
+- (TTAssembleMaker * (^)(UIView *))addView {
     return ^(UIView *view) {
         [self.subViews addObject:view];
         return self;
     };
 }
 
-- (TTAssembleMaker * _Nonnull (^)(CGFloat))paddingEqualTo {
+- (TTAssembleMaker * (^)(CGFloat))paddingEqualTo {
     return ^(CGFloat padding) {
         self.padding = padding;
         return self;
     };
 }
 
-- (TTAssembleMaker * _Nonnull (^)(TTAssembleAlignment))alignmentEqualTo {
+- (TTAssembleMaker * (^)(TTAssembleAlignment))alignmentEqualTo {
     return ^(TTAssembleAlignment alignment) {
         self.alignment = alignment;
         return self;
     };
 }
 
-- (TTAssembleMaker * _Nonnull (^)(TTAssembleArrang))arrangEqualTo {
+- (TTAssembleMaker * (^)(TTAssembleArrang))arrangEqualTo {
     return ^(TTAssembleArrang arrang) {
         self.arrang = arrang;
         return self;
     };
 }
 
-- (TTAssembleMaker * _Nonnull (^)(NSUInteger))extendWithEqualTo {
+- (TTAssembleMaker * (^)(NSUInteger))extendWithEqualTo {
     return ^(NSUInteger extendWith) {
         self.extendWith = extendWith;
         return self;
     };
 }
+
+#pragma mark - getter
 
 - (NSMutableArray *)subViews {
     if (!_subViews) {

@@ -17,70 +17,70 @@ typedef NS_ENUM(NSUInteger, TTPartType) {
 
 #pragma mark - 布局
 
-- (TTPartMaker * _Nonnull (^)(UIView * _Nonnull))customViewEqualTo {
+- (TTPartMaker * (^)(UIView *))customViewEqualTo {
     return ^TTPartMaker *(UIView *customView) {
         self.view = customView;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(CGSize))sizeEqualTo {
+- (TTPartMaker * (^)(CGSize))sizeEqualTo {
     return ^TTPartMaker *(CGSize size) {
         self.size = size;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(BOOL))isFillEqualTo {
+- (TTPartMaker * (^)(BOOL))isFillEqualTo {
     return ^TTPartMaker *(BOOL isFill) {
         self.isFill = isFill;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(CGFloat))paddingEqualTo {
+- (TTPartMaker * (^)(CGFloat))paddingEqualTo {
     return ^TTPartMaker *(CGFloat padding) {
         self.padding = padding;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(TTPartAlignment))partAlignmentEqualTo {
+- (TTPartMaker * (^)(TTPartAlignment))partAlignmentEqualTo {
     return ^TTPartMaker *(TTPartAlignment partAlignment) {
         self.partAlignment = partAlignment;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(CGFloat))alignmentMarginEqualTo {
+- (TTPartMaker * (^)(CGFloat))alignmentMarginEqualTo {
     return ^TTPartMaker *(CGFloat alignmentMargin) {
         self.alignmentMargin = alignmentMargin;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(TTPartAlignment))ignoreAlignmentEqualTo {
+- (TTPartMaker * (^)(TTPartAlignment))ignoreAlignmentEqualTo {
     return ^TTPartMaker *(TTPartAlignment ignoreAlignment) {
         self.ignoreAlignment = ignoreAlignment;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(TTPartPriority))CRPriorityEqualTo {
+- (TTPartMaker * (^)(TTPartPriority))CRPriorityEqualTo {
     return ^TTPartMaker *(TTPartPriority CRPriority) {
         self.CRPriority = CRPriority;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(CGFloat))minWidthEqualTo {
+- (TTPartMaker * (^)(CGFloat))minWidthEqualTo {
     return ^TTPartMaker *(CGFloat minWidth) {
         self.minWidth = minWidth;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(CGFloat))maxWidthEqualTo {
+- (TTPartMaker * (^)(CGFloat))maxWidthEqualTo {
     return ^TTPartMaker *(CGFloat maxWidth) {
         self.maxWidth = maxWidth;
         return self;
@@ -89,70 +89,70 @@ typedef NS_ENUM(NSUInteger, TTPartType) {
 
 #pragma mark - 控件 通用
 
-- (TTPartMaker * _Nonnull (^)(UIColor * _Nonnull))backColorIs {
+- (TTPartMaker * (^)(UIColor *))backColorIs {
     return ^TTPartMaker *(UIColor *backColor) {
         self.backColor = backColor;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(NSString * _Nonnull))backColorHexStringIs {
+- (TTPartMaker * (^)(NSString *))backColorHexStringIs {
     return ^TTPartMaker *(NSString *hexString) {
         self.backColor = [UIColor colorWithHexString:hexString];
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(UIColor * _Nonnull))backBoardColorIs {
+- (TTPartMaker * (^)(UIColor *))backBoardColorIs {
     return ^TTPartMaker *(UIColor *backBoardColor) {
         self.backBoardColor = backBoardColor;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(NSString * _Nonnull))backBoardColorHexStringIs {
+- (TTPartMaker * (^)(NSString *))backBoardColorHexStringIs {
     return ^TTPartMaker *(NSString *hexString) {
         self.backBoardColor = [UIColor colorWithHexString:hexString];
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(CGFloat))backBoardWidthIs {
+- (TTPartMaker * (^)(CGFloat))backBoardWidthIs {
     return ^(CGFloat width) {
         self.backBoardWidth = width;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(CGFloat))backBoardRadiusIs {
+- (TTPartMaker * (^)(CGFloat))backBoardRadiusIs {
     return ^(CGFloat radius) {
         self.backBoardRadius = radius;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(CGFloat))backPaddingHorizontalIs {
+- (TTPartMaker * (^)(CGFloat))backPaddingHorizontalIs {
     return ^(CGFloat padding) {
         self.backPaddingHorizontal = padding;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(CGFloat))backPaddingVerticalIs {
+- (TTPartMaker * (^)(CGFloat))backPaddingVerticalIs {
     return ^(CGFloat padding) {
         self.backPaddingVertical = padding;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(UIButton * _Nonnull))buttonIs {
+- (TTPartMaker * (^)(UIButton *))buttonIs {
     return ^(UIButton *button) {
         self.button = button;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(UIColor * _Nonnull))buttonHighlightColorIs {
+- (TTPartMaker * (^)(UIColor *))buttonHighlightColorIs {
     return ^(UIColor *color) {
         self.buttonHighlightColor = color;
         return self;
@@ -161,42 +161,42 @@ typedef NS_ENUM(NSUInteger, TTPartType) {
 
 #pragma mark - UILabel
 
-- (TTPartMaker * _Nonnull (^)(NSString * _Nonnull))textIs {
+- (TTPartMaker * (^)(NSString *))textIs {
     return ^(NSString *text) {
         self.text = text;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(UIFont * _Nonnull))fontIs {
+- (TTPartMaker * (^)(UIFont *))fontIs {
     return ^(UIFont *font) {
         self.font = font;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(CGFloat))fontSizeIs {
+- (TTPartMaker * (^)(CGFloat))fontSizeIs {
     return ^(CGFloat fontSize) {
         self.font = [UIFont systemFontOfSize:fontSize];
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(UIColor * _Nonnull))colorIs {
+- (TTPartMaker * (^)(UIColor *))colorIs {
     return ^(UIColor *color) {
         self.color = color;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(NSString * _Nonnull))colorHexStringIs {
+- (TTPartMaker * (^)(NSString *))colorHexStringIs {
     return ^(NSString *hexString) {
         self.color = [UIColor colorWithHexString:hexString];
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(TTPartColor))colorTypeIs {
+- (TTPartMaker * (^)(TTPartColor))colorTypeIs {
     return ^(TTPartColor type) {
         switch (type) {
             case TTPartColor_White:
@@ -227,35 +227,35 @@ typedef NS_ENUM(NSUInteger, TTPartType) {
 
 #pragma mark - UIImageView
 
-- (TTPartMaker * _Nonnull (^)(UIImage * _Nonnull))imageIs {
+- (TTPartMaker * (^)(UIImage *))imageIs {
     return ^(UIImage *image) {
         self.image = image;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(NSString * _Nonnull))imageNameIs {
+- (TTPartMaker * (^)(NSString *))imageNameIs {
     return ^(NSString *imageName) {
         self.image = [UIImage imageNamed:imageName]; // 这里需要根据情况
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(NSString * _Nonnull))imageUrlIs {
+- (TTPartMaker * (^)(NSString *))imageUrlIs {
     return ^(NSString *imageUrl) {
         self.imageUrl = imageUrl;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(UIImage * _Nonnull))imagePlaceholderIs {
+- (TTPartMaker * (^)(UIImage *))imagePlaceholderIs {
     return ^(UIImage *placeholder) {
         self.imagePlaceholder = placeholder;
         return self;
     };
 }
 
-- (TTPartMaker * _Nonnull (^)(NSString * _Nonnull))imagePlaceholderNameIs {
+- (TTPartMaker * (^)(NSString *))imagePlaceholderNameIs {
     return ^(NSString *placeholderName) {
         self.imagePlaceholder = [UIImage imageNamed:placeholderName];
         return self;

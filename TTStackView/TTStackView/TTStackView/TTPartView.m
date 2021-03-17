@@ -14,7 +14,7 @@
 @implementation TTPartView
 
 + (TTPartView *)createView:(void (^)(TTPartMaker * _Nonnull))partMaker {
-    TTPartView *partView = [[TTPartView alloc] init];
+    TTPartView *partView = [[self alloc] init];
     partView.maker = [[TTPartMaker alloc] init];
     partMaker(partView.maker);
     [partView buildPartView];
@@ -25,31 +25,35 @@
 
 - (TTPartView *)buildPartView {
     if (self.maker.image) {
+        
         if (self.maker.view) {
             if ([self.maker.view isKindOfClass:[UIImageView class]]) {
-                UIImageView *imageView = (UIImageView *)self.maker.view;
-                [self updateImageView:imageView];
+                [self updateImageView:(UIImageView *)self.maker.view];
             }
         } else {
             UIImageView *imageView = [[UIImageView alloc] init];
             [self updateImageView:imageView];
             self.maker.view = imageView;
         }
-    } else if (self.maker.text.length > 0 || self.maker.font) {
+        
+    }
+    else if (self.maker.text.length > 0 || self.maker.font) {
+        
         if (self.maker.view) {
             if ([self.maker.view isKindOfClass:[UILabel class]]) {
-                UILabel *label = (UILabel *)self.maker.view;
-                [self updateLabel:label];
+                [self updateLabel:(UILabel *)self.maker.view];
             }
         } else {
             UILabel *label = [[UILabel alloc] init];
             [self updateLabel:label];
             self.maker.view = label;
         }
+        
     }
     
     // 处理有背景的情况
     if (self.maker.backColor || self.maker.backPaddingHorizontal || self.maker.backPaddingVertical) {
+        
         UIView *backView = [[UIView alloc] init];
         if (self.maker.backColor) {
             backView.backgroundColor = self.maker.backColor;
@@ -103,7 +107,7 @@
                                          forState:UIControlStateHighlighted];
         }
         [self.maker.button mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.maker.view);
+            make.left.right.top.bottom.equalTo(self.maker.view);
         }];
     }
     return self;
