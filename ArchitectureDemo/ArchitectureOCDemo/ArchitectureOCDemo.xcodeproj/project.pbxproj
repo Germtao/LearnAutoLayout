@@ -38,6 +38,7 @@
 		3B0433202602FB5C003E5995 /* CoordinateAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoordinateAction.m; sourceTree = "<group>"; };
 		3B04332326030798003E5995 /* Coordinate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coordinate.h; sourceTree = "<group>"; };
 		3B04332426030798003E5995 /* Coordinate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coordinate.m; sourceTree = "<group>"; };
+		3B04332926035ACC003E5995 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		3B0432F42602F1AC003E5995 = {
 			isa = PBXGroup;
 			children = (
+				3B04332926035ACC003E5995 /* README.md */,
 				3B0432FF2602F1AC003E5995 /* ArchitectureOCDemo */,
 				3B0432FE2602F1AC003E5995 /* Products */,
 			);
@@ -70,6 +72,7 @@
 		3B0432FF2602F1AC003E5995 /* ArchitectureOCDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3B043327260356D5003E5995 /* Com */,
 				3B04331A2602F2CB003E5995 /* Coordinate */,
 				3B0433002602F1AC003E5995 /* AppDelegate.h */,
 				3B0433012602F1AC003E5995 /* AppDelegate.m */,
@@ -97,6 +100,13 @@
 				3B04332426030798003E5995 /* Coordinate.m */,
 			);
 			path = Coordinate;
+			sourceTree = "<group>";
+		};
+		3B043327260356D5003E5995 /* Com */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Com;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
