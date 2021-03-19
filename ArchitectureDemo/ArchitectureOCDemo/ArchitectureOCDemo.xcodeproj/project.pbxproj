@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131370387BE75153DFE6239C /* Pods_ArchitectureOCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94790F5C7527858BE6D351AA /* Pods_ArchitectureOCDemo.framework */; };
 		3B0433022602F1AC003E5995 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433012602F1AC003E5995 /* AppDelegate.m */; };
 		3B0433052602F1AC003E5995 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433042602F1AC003E5995 /* SceneDelegate.m */; };
 		3B0433082602F1AC003E5995 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433072602F1AC003E5995 /* ViewController.m */; };
@@ -17,9 +18,22 @@
 		3B04331D2602F442003E5995 /* Dic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04331C2602F442003E5995 /* Dic.m */; };
 		3B0433212602FB5C003E5995 /* CoordinateAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433202602FB5C003E5995 /* CoordinateAction.m */; };
 		3B04332526030798003E5995 /* Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04332426030798003E5995 /* Coordinate.m */; };
+		3B04332E260445C8003E5995 /* AopLogCom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04332D260445C8003E5995 /* AopLogCom.m */; };
+		3B04333326044A5F003E5995 /* ButtonCom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04333226044A5F003E5995 /* ButtonCom.m */; };
+		3B04334626047601003E5995 /* EmergeCom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04334526047601003E5995 /* EmergeCom.m */; };
+		3B04334C26047A49003E5995 /* FirstListCom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04334B26047A49003E5995 /* FirstListCom.m */; };
+		3B04335126047DD5003E5995 /* LabelCom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04335026047DD5003E5995 /* LabelCom.m */; };
+		3B04335626047E87003E5995 /* PublishCom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04335526047E87003E5995 /* PublishCom.m */; };
+		3B04335C26048728003E5995 /* TextGeneratorCom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04335B26048728003E5995 /* TextGeneratorCom.m */; };
+		3B0433612604879F003E5995 /* VCGeneratorCom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433602604879F003E5995 /* VCGeneratorCom.m */; };
+		3B04336826048DDC003E5995 /* FactoryMethodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04336726048DDC003E5995 /* FactoryMethodVC.m */; };
+		3B043370260490AF003E5995 /* PublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04336F260490AF003E5995 /* PublishVC.m */; };
+		3B043375260490BA003E5995 /* StateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B043374260490BA003E5995 /* StateVC.m */; };
+		3B043379260490CB003E5995 /* FirstPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B043378260490CB003E5995 /* FirstPageVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12A13639A76E7B234F8F5793 /* Pods-ArchitectureOCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArchitectureOCDemo.release.xcconfig"; path = "Target Support Files/Pods-ArchitectureOCDemo/Pods-ArchitectureOCDemo.release.xcconfig"; sourceTree = "<group>"; };
 		3B0432FD2602F1AC003E5995 /* ArchitectureOCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchitectureOCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0433002602F1AC003E5995 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B0433012602F1AC003E5995 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +53,33 @@
 		3B04332326030798003E5995 /* Coordinate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coordinate.h; sourceTree = "<group>"; };
 		3B04332426030798003E5995 /* Coordinate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coordinate.m; sourceTree = "<group>"; };
 		3B04332926035ACC003E5995 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3B04332C260445C8003E5995 /* AopLogCom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AopLogCom.h; sourceTree = "<group>"; };
+		3B04332D260445C8003E5995 /* AopLogCom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AopLogCom.m; sourceTree = "<group>"; };
+		3B04333126044A5F003E5995 /* ButtonCom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonCom.h; sourceTree = "<group>"; };
+		3B04333226044A5F003E5995 /* ButtonCom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonCom.m; sourceTree = "<group>"; };
+		3B04333B2604587D003E5995 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B04334426047601003E5995 /* EmergeCom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmergeCom.h; sourceTree = "<group>"; };
+		3B04334526047601003E5995 /* EmergeCom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmergeCom.m; sourceTree = "<group>"; };
+		3B04334A26047A49003E5995 /* FirstListCom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstListCom.h; sourceTree = "<group>"; };
+		3B04334B26047A49003E5995 /* FirstListCom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstListCom.m; sourceTree = "<group>"; };
+		3B04334F26047DD5003E5995 /* LabelCom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabelCom.h; sourceTree = "<group>"; };
+		3B04335026047DD5003E5995 /* LabelCom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabelCom.m; sourceTree = "<group>"; };
+		3B04335426047E87003E5995 /* PublishCom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishCom.h; sourceTree = "<group>"; };
+		3B04335526047E87003E5995 /* PublishCom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishCom.m; sourceTree = "<group>"; };
+		3B04335A26048728003E5995 /* TextGeneratorCom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextGeneratorCom.h; sourceTree = "<group>"; };
+		3B04335B26048728003E5995 /* TextGeneratorCom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextGeneratorCom.m; sourceTree = "<group>"; };
+		3B04335F2604879F003E5995 /* VCGeneratorCom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCGeneratorCom.h; sourceTree = "<group>"; };
+		3B0433602604879F003E5995 /* VCGeneratorCom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCGeneratorCom.m; sourceTree = "<group>"; };
+		3B04336626048DDC003E5995 /* FactoryMethodVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryMethodVC.h; sourceTree = "<group>"; };
+		3B04336726048DDC003E5995 /* FactoryMethodVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryMethodVC.m; sourceTree = "<group>"; };
+		3B04336E260490AF003E5995 /* PublishVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishVC.h; sourceTree = "<group>"; };
+		3B04336F260490AF003E5995 /* PublishVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishVC.m; sourceTree = "<group>"; };
+		3B043373260490BA003E5995 /* StateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateVC.h; sourceTree = "<group>"; };
+		3B043374260490BA003E5995 /* StateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StateVC.m; sourceTree = "<group>"; };
+		3B043377260490CB003E5995 /* FirstPageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstPageVC.h; sourceTree = "<group>"; };
+		3B043378260490CB003E5995 /* FirstPageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstPageVC.m; sourceTree = "<group>"; };
+		87061971AF613EB03C64CF8C /* Pods-ArchitectureOCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArchitectureOCDemo.debug.xcconfig"; path = "Target Support Files/Pods-ArchitectureOCDemo/Pods-ArchitectureOCDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		94790F5C7527858BE6D351AA /* Pods_ArchitectureOCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArchitectureOCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				131370387BE75153DFE6239C /* Pods_ArchitectureOCDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +100,8 @@
 				3B04332926035ACC003E5995 /* README.md */,
 				3B0432FF2602F1AC003E5995 /* ArchitectureOCDemo */,
 				3B0432FE2602F1AC003E5995 /* Products */,
+				D5D7663AB539B5E696AC39B8 /* Pods */,
+				D42560192813240A04B890BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +116,7 @@
 		3B0432FF2602F1AC003E5995 /* ArchitectureOCDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3B04336426048D89003E5995 /* VC */,
 				3B043327260356D5003E5995 /* Com */,
 				3B04331A2602F2CB003E5995 /* Coordinate */,
 				3B0433002602F1AC003E5995 /* AppDelegate.h */,
@@ -105,8 +150,153 @@
 		3B043327260356D5003E5995 /* Com */ = {
 			isa = PBXGroup;
 			children = (
+				3B04335E2604878E003E5995 /* VCGeneratorCom */,
+				3B0433592604871F003E5995 /* TextGeneratorCom */,
+				3B04335326047E7D003E5995 /* PublishCom */,
+				3B04334E26047DCC003E5995 /* LabelCom */,
+				3B04334926047A3D003E5995 /* FirstListCom */,
+				3B043343260475EF003E5995 /* EmergeCom */,
+				3B04333026044A4C003E5995 /* ButtonCom */,
+				3B04332B260445A6003E5995 /* AopLogCom */,
 			);
 			path = Com;
+			sourceTree = "<group>";
+		};
+		3B04332B260445A6003E5995 /* AopLogCom */ = {
+			isa = PBXGroup;
+			children = (
+				3B04332C260445C8003E5995 /* AopLogCom.h */,
+				3B04332D260445C8003E5995 /* AopLogCom.m */,
+			);
+			path = AopLogCom;
+			sourceTree = "<group>";
+		};
+		3B04333026044A4C003E5995 /* ButtonCom */ = {
+			isa = PBXGroup;
+			children = (
+				3B04333126044A5F003E5995 /* ButtonCom.h */,
+				3B04333226044A5F003E5995 /* ButtonCom.m */,
+			);
+			path = ButtonCom;
+			sourceTree = "<group>";
+		};
+		3B043343260475EF003E5995 /* EmergeCom */ = {
+			isa = PBXGroup;
+			children = (
+				3B04334426047601003E5995 /* EmergeCom.h */,
+				3B04334526047601003E5995 /* EmergeCom.m */,
+			);
+			path = EmergeCom;
+			sourceTree = "<group>";
+		};
+		3B04334926047A3D003E5995 /* FirstListCom */ = {
+			isa = PBXGroup;
+			children = (
+				3B04334A26047A49003E5995 /* FirstListCom.h */,
+				3B04334B26047A49003E5995 /* FirstListCom.m */,
+			);
+			path = FirstListCom;
+			sourceTree = "<group>";
+		};
+		3B04334E26047DCC003E5995 /* LabelCom */ = {
+			isa = PBXGroup;
+			children = (
+				3B04334F26047DD5003E5995 /* LabelCom.h */,
+				3B04335026047DD5003E5995 /* LabelCom.m */,
+			);
+			path = LabelCom;
+			sourceTree = "<group>";
+		};
+		3B04335326047E7D003E5995 /* PublishCom */ = {
+			isa = PBXGroup;
+			children = (
+				3B04335426047E87003E5995 /* PublishCom.h */,
+				3B04335526047E87003E5995 /* PublishCom.m */,
+			);
+			path = PublishCom;
+			sourceTree = "<group>";
+		};
+		3B0433592604871F003E5995 /* TextGeneratorCom */ = {
+			isa = PBXGroup;
+			children = (
+				3B04335A26048728003E5995 /* TextGeneratorCom.h */,
+				3B04335B26048728003E5995 /* TextGeneratorCom.m */,
+			);
+			path = TextGeneratorCom;
+			sourceTree = "<group>";
+		};
+		3B04335E2604878E003E5995 /* VCGeneratorCom */ = {
+			isa = PBXGroup;
+			children = (
+				3B04335F2604879F003E5995 /* VCGeneratorCom.h */,
+				3B0433602604879F003E5995 /* VCGeneratorCom.m */,
+			);
+			path = VCGeneratorCom;
+			sourceTree = "<group>";
+		};
+		3B04336426048D89003E5995 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				3B04336D26049092003E5995 /* FirstPage */,
+				3B04336C26049089003E5995 /* State */,
+				3B04336B2604907E003E5995 /* Publish */,
+				3B04336526048D9C003E5995 /* FactoryMethod */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		3B04336526048D9C003E5995 /* FactoryMethod */ = {
+			isa = PBXGroup;
+			children = (
+				3B04336626048DDC003E5995 /* FactoryMethodVC.h */,
+				3B04336726048DDC003E5995 /* FactoryMethodVC.m */,
+			);
+			path = FactoryMethod;
+			sourceTree = "<group>";
+		};
+		3B04336B2604907E003E5995 /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				3B04336E260490AF003E5995 /* PublishVC.h */,
+				3B04336F260490AF003E5995 /* PublishVC.m */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
+		3B04336C26049089003E5995 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				3B043373260490BA003E5995 /* StateVC.h */,
+				3B043374260490BA003E5995 /* StateVC.m */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		3B04336D26049092003E5995 /* FirstPage */ = {
+			isa = PBXGroup;
+			children = (
+				3B043377260490CB003E5995 /* FirstPageVC.h */,
+				3B043378260490CB003E5995 /* FirstPageVC.m */,
+			);
+			path = FirstPage;
+			sourceTree = "<group>";
+		};
+		D42560192813240A04B890BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B04333B2604587D003E5995 /* ReactiveCocoa.framework */,
+				94790F5C7527858BE6D351AA /* Pods_ArchitectureOCDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5D7663AB539B5E696AC39B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87061971AF613EB03C64CF8C /* Pods-ArchitectureOCDemo.debug.xcconfig */,
+				12A13639A76E7B234F8F5793 /* Pods-ArchitectureOCDemo.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,9 +306,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B0433162602F1B1003E5995 /* Build configuration list for PBXNativeTarget "ArchitectureOCDemo" */;
 			buildPhases = (
+				9AD211F53765B5259AFB63A7 /* [CP] Check Pods Manifest.lock */,
 				3B0432F92602F1AC003E5995 /* Sources */,
 				3B0432FA2602F1AC003E5995 /* Frameworks */,
 				3B0432FB2602F1AC003E5995 /* Resources */,
+				FB70A60239A2E79CC46B00F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,18 +365,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9AD211F53765B5259AFB63A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ArchitectureOCDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB70A60239A2E79CC46B00F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ArchitectureOCDemo/Pods-ArchitectureOCDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ArchitectureOCDemo/Pods-ArchitectureOCDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ArchitectureOCDemo/Pods-ArchitectureOCDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3B0432F92602F1AC003E5995 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B043370260490AF003E5995 /* PublishVC.m in Sources */,
+				3B04335126047DD5003E5995 /* LabelCom.m in Sources */,
 				3B04331D2602F442003E5995 /* Dic.m in Sources */,
+				3B04334C26047A49003E5995 /* FirstListCom.m in Sources */,
+				3B04333326044A5F003E5995 /* ButtonCom.m in Sources */,
 				3B0433082602F1AC003E5995 /* ViewController.m in Sources */,
 				3B0433022602F1AC003E5995 /* AppDelegate.m in Sources */,
+				3B0433612604879F003E5995 /* VCGeneratorCom.m in Sources */,
+				3B043375260490BA003E5995 /* StateVC.m in Sources */,
+				3B04334626047601003E5995 /* EmergeCom.m in Sources */,
 				3B0433212602FB5C003E5995 /* CoordinateAction.m in Sources */,
+				3B04335C26048728003E5995 /* TextGeneratorCom.m in Sources */,
 				3B0433132602F1B1003E5995 /* main.m in Sources */,
 				3B04332526030798003E5995 /* Coordinate.m in Sources */,
+				3B043379260490CB003E5995 /* FirstPageVC.m in Sources */,
 				3B0433052602F1AC003E5995 /* SceneDelegate.m in Sources */,
+				3B04335626047E87003E5995 /* PublishCom.m in Sources */,
+				3B04336826048DDC003E5995 /* FactoryMethodVC.m in Sources */,
+				3B04332E260445C8003E5995 /* AopLogCom.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +570,7 @@
 		};
 		3B0433172602F1B1003E5995 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87061971AF613EB03C64CF8C /* Pods-ArchitectureOCDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -341,6 +588,7 @@
 		};
 		3B0433182602F1B1003E5995 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12A13639A76E7B234F8F5793 /* Pods-ArchitectureOCDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
