@@ -6,8 +6,11 @@
 //
 
 #import "PublishVC.h"
+#import "Coordinate+Publish.h"
 
 @interface PublishVC ()
+
+@property (nonatomic, strong) Coordinate *coordinate;
 
 @end
 
@@ -15,17 +18,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.coordinate publishInVC:self];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (Coordinate *)coordinate {
+    if (!_coordinate) {
+        _coordinate = [Coordinate new];
+    }
+    return _coordinate;
 }
-*/
 
 @end
