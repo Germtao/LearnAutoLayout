@@ -6,8 +6,15 @@
 //
 
 #import "FactoryMethodVC.h"
+#import "BlackDragonFactory.h"
+#import "RedDragonFactory.h"
+#import <Masonry/Masonry.h>
 
 @interface FactoryMethodVC ()
+
+@property (nonatomic, strong) UILabel *dragonLabel;
+
+@property (nonatomic, strong) id<DragonFactory> dragonFactory;
 
 @end
 
@@ -15,17 +22,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.dragonLabel];
+    [self.dragonLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(100);
+        make.centerX.equalTo(self.view);
+    }];
+    
+    BOOL isRed = YES;
+    if (isRed) {
+        self.dragonFactory = [[RedDragonFactory alloc] init];
+    } else {
+        self.dragonFactory = [[BlackDragonFactory alloc] init];
+    }
+    id<Dragon> dragon = [self.dragonFactory newDragon];
+    
+    self.dragonLabel.text = dragon.eat;
+    self.dragonLabel.textColor = dragon.color;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UILabel *)dragonLabel {
+    if (!_dragonLabel) {
+        _dragonLabel = [[UILabel alloc] init];
+    }
+    return _dragonLabel;
 }
-*/
 
 @end

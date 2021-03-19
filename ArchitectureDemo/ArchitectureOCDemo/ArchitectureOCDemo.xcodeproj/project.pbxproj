@@ -30,6 +30,10 @@
 		3B043370260490AF003E5995 /* PublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04336F260490AF003E5995 /* PublishVC.m */; };
 		3B043375260490BA003E5995 /* StateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B043374260490BA003E5995 /* StateVC.m */; };
 		3B043379260490CB003E5995 /* FirstPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B043378260490CB003E5995 /* FirstPageVC.m */; };
+		3B04338426049C30003E5995 /* BlackDragon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04338326049C30003E5995 /* BlackDragon.m */; };
+		3B04338826049CBE003E5995 /* RedDragon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04338726049CBE003E5995 /* RedDragon.m */; };
+		3B04338C26049D4C003E5995 /* BlackDragonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04338B26049D4C003E5995 /* BlackDragonFactory.m */; };
+		3B04339026049DB5003E5995 /* RedDragonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04338F26049DB5003E5995 /* RedDragonFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +82,16 @@
 		3B043374260490BA003E5995 /* StateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StateVC.m; sourceTree = "<group>"; };
 		3B043377260490CB003E5995 /* FirstPageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstPageVC.h; sourceTree = "<group>"; };
 		3B043378260490CB003E5995 /* FirstPageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstPageVC.m; sourceTree = "<group>"; };
+		3B04337E26049AF7003E5995 /* Dragon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dragon.h; sourceTree = "<group>"; };
+		3B04338026049B59003E5995 /* DragonFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragonFactory.h; sourceTree = "<group>"; };
+		3B04338226049C30003E5995 /* BlackDragon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackDragon.h; sourceTree = "<group>"; };
+		3B04338326049C30003E5995 /* BlackDragon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlackDragon.m; sourceTree = "<group>"; };
+		3B04338626049CBD003E5995 /* RedDragon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedDragon.h; sourceTree = "<group>"; };
+		3B04338726049CBE003E5995 /* RedDragon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedDragon.m; sourceTree = "<group>"; };
+		3B04338A26049D4C003E5995 /* BlackDragonFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackDragonFactory.h; sourceTree = "<group>"; };
+		3B04338B26049D4C003E5995 /* BlackDragonFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlackDragonFactory.m; sourceTree = "<group>"; };
+		3B04338E26049DB5003E5995 /* RedDragonFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedDragonFactory.h; sourceTree = "<group>"; };
+		3B04338F26049DB5003E5995 /* RedDragonFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedDragonFactory.m; sourceTree = "<group>"; };
 		87061971AF613EB03C64CF8C /* Pods-ArchitectureOCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArchitectureOCDemo.debug.xcconfig"; path = "Target Support Files/Pods-ArchitectureOCDemo/Pods-ArchitectureOCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		94790F5C7527858BE6D351AA /* Pods_ArchitectureOCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArchitectureOCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -250,6 +264,16 @@
 			children = (
 				3B04336626048DDC003E5995 /* FactoryMethodVC.h */,
 				3B04336726048DDC003E5995 /* FactoryMethodVC.m */,
+				3B04337E26049AF7003E5995 /* Dragon.h */,
+				3B04338026049B59003E5995 /* DragonFactory.h */,
+				3B04338226049C30003E5995 /* BlackDragon.h */,
+				3B04338326049C30003E5995 /* BlackDragon.m */,
+				3B04338626049CBD003E5995 /* RedDragon.h */,
+				3B04338726049CBE003E5995 /* RedDragon.m */,
+				3B04338A26049D4C003E5995 /* BlackDragonFactory.h */,
+				3B04338B26049D4C003E5995 /* BlackDragonFactory.m */,
+				3B04338E26049DB5003E5995 /* RedDragonFactory.h */,
+				3B04338F26049DB5003E5995 /* RedDragonFactory.m */,
 			);
 			path = FactoryMethod;
 			sourceTree = "<group>";
@@ -417,6 +441,7 @@
 				3B04331D2602F442003E5995 /* Dic.m in Sources */,
 				3B04334C26047A49003E5995 /* FirstListCom.m in Sources */,
 				3B04333326044A5F003E5995 /* ButtonCom.m in Sources */,
+				3B04338C26049D4C003E5995 /* BlackDragonFactory.m in Sources */,
 				3B0433082602F1AC003E5995 /* ViewController.m in Sources */,
 				3B0433022602F1AC003E5995 /* AppDelegate.m in Sources */,
 				3B0433612604879F003E5995 /* VCGeneratorCom.m in Sources */,
@@ -424,13 +449,16 @@
 				3B04334626047601003E5995 /* EmergeCom.m in Sources */,
 				3B0433212602FB5C003E5995 /* CoordinateAction.m in Sources */,
 				3B04335C26048728003E5995 /* TextGeneratorCom.m in Sources */,
+				3B04338426049C30003E5995 /* BlackDragon.m in Sources */,
 				3B0433132602F1B1003E5995 /* main.m in Sources */,
 				3B04332526030798003E5995 /* Coordinate.m in Sources */,
 				3B043379260490CB003E5995 /* FirstPageVC.m in Sources */,
+				3B04339026049DB5003E5995 /* RedDragonFactory.m in Sources */,
 				3B0433052602F1AC003E5995 /* SceneDelegate.m in Sources */,
 				3B04335626047E87003E5995 /* PublishCom.m in Sources */,
 				3B04336826048DDC003E5995 /* FactoryMethodVC.m in Sources */,
 				3B04332E260445C8003E5995 /* AopLogCom.m in Sources */,
+				3B04338826049CBE003E5995 /* RedDragon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
