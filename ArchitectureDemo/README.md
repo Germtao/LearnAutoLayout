@@ -53,6 +53,7 @@
 
 但是，我认为不用把所有的功能都做成组件，只有那些会被多个业务或者团队使用的功能模块才需要做成组件。因为，改造成组件也是需要时间成本的，很少有公司愿意完全停下业务去进行重构，而一旦决定某业务功能模块要改成组件，就要抓住机会，严格按照 `SOLID` 原则去改造组件，因为返工和再优化的机会可能不会再有。
 
+---
 
 ### 多团队之间如何分工？
 
@@ -64,6 +65,7 @@
 
 总结来讲，我想说的是团队分工要灵活，不要把人员隔离固化了，否则各干各的，做的东西相互都不用。核心上，团队分工还是要围绕着具体业务进行功能模块提炼，去解决重复建设的问题，在这个基础上把提炼出的模块做精做扎实。否则，拉一帮子人臆想出来的东西，无人问津，那就是把自己架空了。
 
+---
 
 ### 我心目中好的架构是什么样的？
 
@@ -85,7 +87,7 @@
 
 中间者架构如下图所示：
 
-![中间者架构示意图](https://github.com/Germtao/LearnAutoLayout/blob/master/ArchitectureDemo/%E4%B8%AD%E9%97%B4%E8%80%85%E6%9E%B6%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.png)
+![图1 中间者架构示意图](https://github.com/Germtao/LearnAutoLayout/blob/master/ArchitectureDemo/%E4%B8%AD%E9%97%B4%E8%80%85%E6%9E%B6%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.png)
 
 可以看到，拆分的组件都会依赖于中间者，但是组间之间就不存在相互依赖的关系了。由于其他组件都会依赖于这个中间者，相互间的通信都会通过中间者统一调度，所以组件间的通信也就更容易管理了。在中间者上也能够轻松添加新的设计模式，从而使得架构更容易扩展。
 
@@ -185,7 +187,106 @@
 不过，解耦的精髓在于业务逻辑能够独立出来，并不是形式上的解除编译上的耦合（编译上解除耦合只能算是解耦的一种手段而已）。所以，在考虑架构设计时，我们**更多的还是需要在功能逻辑和组件划分上做到同层级解耦，上下层依赖清晰，这样的结构才能够使得上层组件易插拔，下层组件更稳固。而中间者架构模式更容易维护这种结构，中间者的易管控和易扩展性，也使得整体架构能够长期保持稳健与活力。所以，中间者架构就是我心目中好的架构**。
 
 
+---
+
+### 案例
+
+明确了中间者架构是我认为的好架构，那么如何体现其易管控和易扩展性呢？这个例子的代码，在 `CTMediator` 的基础上进行了扩展，完整代码请点击这个 [GitHub链接](https://github.com/Germtao/LearnAutoLayout/tree/master/ArchitectureDemo)。
+
+这个范例的主要组件类名和方法名，如下图所示：
+
+![图2 主要的组件类名和方法名](https://github.com/Germtao/LearnAutoLayout/blob/master/ArchitectureDemo/mainClass2.png)
+
+可以看出，这个案例在**中间者架构**的基础上增加了对`中间件`、`状态机`、`观察者`、`工厂模式`的支持。同时，这个案例也在使用上做了些优化，支持了链式调用，代码如下：
+
+```
+// PublishCom 是组件类名，ViewInVC 是方法名。
+self.dispatch(CoordinateAction.classIs(@"PublishCom").methodIs(@"viewInVC").parametersIs(dic));
+```
+
+下面说下**中间件模式**。在添加中间件的时候，我们只需要链式调用 `addMiddlewareAction` 就可以在方法执行之前插入中间件。代码如下：
+
+```
+self.middleware(@"PublishCom showEmergeView").addMiddlewareAction(CoordinateAction.classMethod(@"AopLogCom emergeLog").parametersIs(Dic.create.key(@"actionState").value(@"show").done));
+```
+
+这行代码对字典参数也使用了链式方便参数的设置，使得字典设置更易于编写。改变状态使用 `toStateIs` 方法即可，状态的维护和管理都在内部实现。同一个方法不同状态的实现只需要在命名规则上做文章即可，这也是得易于中间者架构可以统一处理方法调用规则的特性。比如，`confirmEmerge` 方法在不同状态下的实现代码如下：
+
+```
+// 状态管理
+- (void)confirmEmerge_state_focusTitle:(NSDictionary *)dic { 
+    NSString *title = dic[@"title"]; 
+    [self.fromAddressBt setTitle:title forState:UIControlStateNormal]; 
+    self.fromAddressBt.tag = 1;
+}
+- (void)confirmEmerge_state_focusContent:(NSDictionary *)dic { 
+    NSString *title = dic[@"title"]; 
+    [self.toAddressBt setTitle:title forState:UIControlStateNormal]; 
+    self.toAddressBt.tag = 1;
+}
+- (void)confirmEmerge_state_focusPrice:(NSDictionary *)dic { 
+    NSString *title = dic[@"title"]; 
+    [self.peopleBt setTitle:title forState:UIControlStateNormal]; 
+    self.peopleBt.tag = 1;
+}
+```
+
+可以看出，我们只需要在方法名后面加上`_state_状态名`，就能够对不同状态进行不同实现了。
 
 
+对于**观察者模式**，使用起来也很简单清晰。比如，发布文章这个事件需要两个观察者，一个**执行重置界面**，一个**检查是否能够发布**，代码如下：
+
+```
+/// 观察者管理 
+self.observerWithIdentifier(@"publishOk").addObserver(CoordinateAction.classMethod(@"PublishCom reset")).addObserver(CoordinateAction.classMethod(@"PublishCom checkPublish"));
+```
+
+这样的写法非常简单清晰。在发布时，我们只需要执行如下代码：
+
+```
+[self notifyObservers:@"publishOk"];
+```
+
+观察者方法添加后，也会记录在内部，它们的生命周期跟随中间者的生命周期。
 
 
+**工厂模式的思路和状态机类似**，状态机是对方法在不同状态下的实现，而工厂模式是对类在不同设置下的不同实现。由于有了中间者，我就可以在传入类名后对其进行类似状态机中方法名的处理，以便类的不同实现可以通过命名规则来完成。我们先看看中间者处理状态机的代码：
+
+```
+// State action 状态处理
+if (![self.p_currentState isEqual:@"init"]) { 
+    SEL stateMethod = NSSelectorFromString([NSString stringWithFormat:@"%@_state_%@:", sep[1], self.p_currentState]); 
+    if ([obj respondsToSelector:stateMethod]) { 
+        return [self executeMethod:stateMethod obj:obj parameters:parameters]; 
+    }
+}
+```
+
+可以看出当前的状态会记录在 `p_currentState` 属性中，方法调用时方法名会和当前的状态的命名拼接成一个完整的实现方法名来调用。中间者处理工厂模式的思路也类似，代码如下：
+
+```
+// Factory
+// 由于后面的执行都会用到 class 所以需要优先处理 class 的变形体
+NSString *factory = [self.factoryMap objectForKey:classStr];
+if (factory) {
+    classStr = [NSString stringWithFormat:@"%@_factory_%@", classStr, factory];
+    classMethod = [NSString stringWithFormat:@"%@ %@", classStr, sep[1]];
+}
+```
+
+可以看出，采用了中间者这种架构设计思想后，架构就具有了很高的扩展性和可管控性。所以，我推崇这种架构设计思路。
+
+--- 
+
+### 小结
+
+架构的设计绝对不是要等到工程到了燃眉之急之时，再去环顾其他公司或团队在用什么架构，然后拍脑袋拿一个过来，来次大重构。好的架构，需要在业务开发过程中及早发现开发的痛点，进行有针对性的改良，不然就会和实际开发越走越远。
+
+
+比如，某个业务模块的逻辑非常复杂、状态有很多，这时我们就需要在架构层面考虑如何处理会更方便，改动最小的支持状态机模式，又或者在开始架构设计时就多考虑如何将架构设计的具有更高的易用性和可扩展性。
+
+
+好的架构是能够在一定的规范内同时支持高灵活度，这种度的把握是需要架构师长期跟随团队开发，随着实际业务需求的演进进行分析和把控的。在项目大了，人员多了的情况下，好的架构一定是不简单的，不通用的，但一定是接地气的，这样才能更适合自己的团队，才能够用得上。那些大而全，炫技，脱离业务开发需求的架构是没法落地的。
+
+
+所以，作为一名普通的开发者，除了日常需求开发和技术方案调研、设计外，你还需要了解自己所在项目的整体架构是怎样的，想想架构上哪些地方是不够好需要改进的，业界有哪些好的架构思想是可以落地到自己项目中的。有了从项目整体上去思考的意识，你才能够站在更高的视角上去思考问题。这，也是对架构师的基本要求。
