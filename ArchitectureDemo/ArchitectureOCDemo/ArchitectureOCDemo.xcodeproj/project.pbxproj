@@ -36,6 +36,10 @@
 		3B04339026049DB5003E5995 /* RedDragonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04338F26049DB5003E5995 /* RedDragonFactory.m */; };
 		3B0433942604A2A8003E5995 /* Coordinate+Publish.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433932604A2A8003E5995 /* Coordinate+Publish.m */; };
 		3B04339826082E1D003E5995 /* Coordinate+FirstPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04339726082E1D003E5995 /* Coordinate+FirstPage.m */; };
+		3B04339E26083E65003E5995 /* FieryDragon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04339D26083E65003E5995 /* FieryDragon.m */; };
+		3B0433A326083F52003E5995 /* RedFieryDragonAbility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433A226083F52003E5995 /* RedFieryDragonAbility.m */; };
+		3B0433A72608410F003E5995 /* BlackFieryDragonAbility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433A62608410F003E5995 /* BlackFieryDragonAbility.m */; };
+		3B0433AC26084191003E5995 /* BridgeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433AB26084191003E5995 /* BridgeVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +102,15 @@
 		3B0433932604A2A8003E5995 /* Coordinate+Publish.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Coordinate+Publish.m"; sourceTree = "<group>"; };
 		3B04339626082E1D003E5995 /* Coordinate+FirstPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Coordinate+FirstPage.h"; sourceTree = "<group>"; };
 		3B04339726082E1D003E5995 /* Coordinate+FirstPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Coordinate+FirstPage.m"; sourceTree = "<group>"; };
+		3B04339B26083DC8003E5995 /* DragonAbility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragonAbility.h; sourceTree = "<group>"; };
+		3B04339C26083E65003E5995 /* FieryDragon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FieryDragon.h; sourceTree = "<group>"; };
+		3B04339D26083E65003E5995 /* FieryDragon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FieryDragon.m; sourceTree = "<group>"; };
+		3B0433A126083F52003E5995 /* RedFieryDragonAbility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedFieryDragonAbility.h; sourceTree = "<group>"; };
+		3B0433A226083F52003E5995 /* RedFieryDragonAbility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedFieryDragonAbility.m; sourceTree = "<group>"; };
+		3B0433A52608410F003E5995 /* BlackFieryDragonAbility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackFieryDragonAbility.h; sourceTree = "<group>"; };
+		3B0433A62608410F003E5995 /* BlackFieryDragonAbility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlackFieryDragonAbility.m; sourceTree = "<group>"; };
+		3B0433AA26084191003E5995 /* BridgeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeVC.h; sourceTree = "<group>"; };
+		3B0433AB26084191003E5995 /* BridgeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeVC.m; sourceTree = "<group>"; };
 		87061971AF613EB03C64CF8C /* Pods-ArchitectureOCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArchitectureOCDemo.debug.xcconfig"; path = "Target Support Files/Pods-ArchitectureOCDemo/Pods-ArchitectureOCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		94790F5C7527858BE6D351AA /* Pods_ArchitectureOCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArchitectureOCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -257,6 +270,7 @@
 		3B04336426048D89003E5995 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				3B04339A26083DAE003E5995 /* Bridge */,
 				3B04336D26049092003E5995 /* FirstPage */,
 				3B04336C26049089003E5995 /* State */,
 				3B04336B2604907E003E5995 /* Publish */,
@@ -313,6 +327,22 @@
 				3B04339726082E1D003E5995 /* Coordinate+FirstPage.m */,
 			);
 			path = FirstPage;
+			sourceTree = "<group>";
+		};
+		3B04339A26083DAE003E5995 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				3B04339B26083DC8003E5995 /* DragonAbility.h */,
+				3B04339C26083E65003E5995 /* FieryDragon.h */,
+				3B04339D26083E65003E5995 /* FieryDragon.m */,
+				3B0433A126083F52003E5995 /* RedFieryDragonAbility.h */,
+				3B0433A226083F52003E5995 /* RedFieryDragonAbility.m */,
+				3B0433A52608410F003E5995 /* BlackFieryDragonAbility.h */,
+				3B0433A62608410F003E5995 /* BlackFieryDragonAbility.m */,
+				3B0433AA26084191003E5995 /* BridgeVC.h */,
+				3B0433AB26084191003E5995 /* BridgeVC.m */,
+			);
+			path = Bridge;
 			sourceTree = "<group>";
 		};
 		D42560192813240A04B890BE /* Frameworks */ = {
@@ -448,8 +478,10 @@
 			files = (
 				3B043370260490AF003E5995 /* PublishVC.m in Sources */,
 				3B04335126047DD5003E5995 /* LabelCom.m in Sources */,
+				3B04339E26083E65003E5995 /* FieryDragon.m in Sources */,
 				3B04331D2602F442003E5995 /* Dic.m in Sources */,
 				3B04334C26047A49003E5995 /* FirstListCom.m in Sources */,
+				3B0433A72608410F003E5995 /* BlackFieryDragonAbility.m in Sources */,
 				3B04333326044A5F003E5995 /* ButtonCom.m in Sources */,
 				3B04338C26049D4C003E5995 /* BlackDragonFactory.m in Sources */,
 				3B0433082602F1AC003E5995 /* ViewController.m in Sources */,
@@ -461,9 +493,11 @@
 				3B04334626047601003E5995 /* EmergeCom.m in Sources */,
 				3B0433212602FB5C003E5995 /* CoordinateAction.m in Sources */,
 				3B04335C26048728003E5995 /* TextGeneratorCom.m in Sources */,
+				3B0433A326083F52003E5995 /* RedFieryDragonAbility.m in Sources */,
 				3B04338426049C30003E5995 /* BlackDragon.m in Sources */,
 				3B0433132602F1B1003E5995 /* main.m in Sources */,
 				3B04332526030798003E5995 /* Coordinate.m in Sources */,
+				3B0433AC26084191003E5995 /* BridgeVC.m in Sources */,
 				3B043379260490CB003E5995 /* FirstPageVC.m in Sources */,
 				3B04339026049DB5003E5995 /* RedDragonFactory.m in Sources */,
 				3B0433052602F1AC003E5995 /* SceneDelegate.m in Sources */,
