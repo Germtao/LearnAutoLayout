@@ -1,5 +1,7 @@
 #  架构
 
+`ArchitectureOCDemo`，基于 `CTMediator` 扩展。
+
 ## 大项目、多人、多团队架构思考
 
 ### 模块粒度应该怎么划分
