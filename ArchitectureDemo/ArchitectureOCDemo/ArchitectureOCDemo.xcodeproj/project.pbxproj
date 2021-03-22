@@ -40,6 +40,10 @@
 		3B0433A326083F52003E5995 /* RedFieryDragonAbility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433A226083F52003E5995 /* RedFieryDragonAbility.m */; };
 		3B0433A72608410F003E5995 /* BlackFieryDragonAbility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433A62608410F003E5995 /* BlackFieryDragonAbility.m */; };
 		3B0433AC26084191003E5995 /* BridgeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433AB26084191003E5995 /* BridgeVC.m */; };
+		3B0433B226084504003E5995 /* DragonFight.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433B126084504003E5995 /* DragonFight.m */; };
+		3B0433B7260845FA003E5995 /* DragonFullEnergyState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433B6260845FA003E5995 /* DragonFullEnergyState.m */; };
+		3B0433BB26084668003E5995 /* DragonHurtState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433BA26084668003E5995 /* DragonHurtState.m */; };
+		3B0433BF26084709003E5995 /* DragonAtTheLastGaspState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433BE26084709003E5995 /* DragonAtTheLastGaspState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +115,15 @@
 		3B0433A62608410F003E5995 /* BlackFieryDragonAbility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlackFieryDragonAbility.m; sourceTree = "<group>"; };
 		3B0433AA26084191003E5995 /* BridgeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeVC.h; sourceTree = "<group>"; };
 		3B0433AB26084191003E5995 /* BridgeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeVC.m; sourceTree = "<group>"; };
+		3B0433AF260844E0003E5995 /* DragonState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragonState.h; sourceTree = "<group>"; };
+		3B0433B026084504003E5995 /* DragonFight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragonFight.h; sourceTree = "<group>"; };
+		3B0433B126084504003E5995 /* DragonFight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragonFight.m; sourceTree = "<group>"; };
+		3B0433B5260845FA003E5995 /* DragonFullEnergyState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragonFullEnergyState.h; sourceTree = "<group>"; };
+		3B0433B6260845FA003E5995 /* DragonFullEnergyState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragonFullEnergyState.m; sourceTree = "<group>"; };
+		3B0433B926084668003E5995 /* DragonHurtState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragonHurtState.h; sourceTree = "<group>"; };
+		3B0433BA26084668003E5995 /* DragonHurtState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragonHurtState.m; sourceTree = "<group>"; };
+		3B0433BD26084709003E5995 /* DragonAtTheLastGaspState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragonAtTheLastGaspState.h; sourceTree = "<group>"; };
+		3B0433BE26084709003E5995 /* DragonAtTheLastGaspState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragonAtTheLastGaspState.m; sourceTree = "<group>"; };
 		87061971AF613EB03C64CF8C /* Pods-ArchitectureOCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArchitectureOCDemo.debug.xcconfig"; path = "Target Support Files/Pods-ArchitectureOCDemo/Pods-ArchitectureOCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		94790F5C7527858BE6D351AA /* Pods_ArchitectureOCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArchitectureOCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -314,6 +327,15 @@
 			children = (
 				3B043373260490BA003E5995 /* StateVC.h */,
 				3B043374260490BA003E5995 /* StateVC.m */,
+				3B0433AF260844E0003E5995 /* DragonState.h */,
+				3B0433B026084504003E5995 /* DragonFight.h */,
+				3B0433B126084504003E5995 /* DragonFight.m */,
+				3B0433B5260845FA003E5995 /* DragonFullEnergyState.h */,
+				3B0433B6260845FA003E5995 /* DragonFullEnergyState.m */,
+				3B0433B926084668003E5995 /* DragonHurtState.h */,
+				3B0433BA26084668003E5995 /* DragonHurtState.m */,
+				3B0433BD26084709003E5995 /* DragonAtTheLastGaspState.h */,
+				3B0433BE26084709003E5995 /* DragonAtTheLastGaspState.m */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -487,18 +509,22 @@
 				3B0433082602F1AC003E5995 /* ViewController.m in Sources */,
 				3B0433022602F1AC003E5995 /* AppDelegate.m in Sources */,
 				3B04339826082E1D003E5995 /* Coordinate+FirstPage.m in Sources */,
+				3B0433BB26084668003E5995 /* DragonHurtState.m in Sources */,
 				3B0433612604879F003E5995 /* VCGeneratorCom.m in Sources */,
 				3B0433942604A2A8003E5995 /* Coordinate+Publish.m in Sources */,
 				3B043375260490BA003E5995 /* StateVC.m in Sources */,
 				3B04334626047601003E5995 /* EmergeCom.m in Sources */,
+				3B0433B226084504003E5995 /* DragonFight.m in Sources */,
 				3B0433212602FB5C003E5995 /* CoordinateAction.m in Sources */,
 				3B04335C26048728003E5995 /* TextGeneratorCom.m in Sources */,
 				3B0433A326083F52003E5995 /* RedFieryDragonAbility.m in Sources */,
 				3B04338426049C30003E5995 /* BlackDragon.m in Sources */,
 				3B0433132602F1B1003E5995 /* main.m in Sources */,
+				3B0433B7260845FA003E5995 /* DragonFullEnergyState.m in Sources */,
 				3B04332526030798003E5995 /* Coordinate.m in Sources */,
 				3B0433AC26084191003E5995 /* BridgeVC.m in Sources */,
 				3B043379260490CB003E5995 /* FirstPageVC.m in Sources */,
+				3B0433BF26084709003E5995 /* DragonAtTheLastGaspState.m in Sources */,
 				3B04339026049DB5003E5995 /* RedDragonFactory.m in Sources */,
 				3B0433052602F1AC003E5995 /* SceneDelegate.m in Sources */,
 				3B04335626047E87003E5995 /* PublishCom.m in Sources */,
