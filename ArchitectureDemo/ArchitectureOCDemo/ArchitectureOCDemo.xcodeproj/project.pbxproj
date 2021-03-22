@@ -35,6 +35,7 @@
 		3B04338C26049D4C003E5995 /* BlackDragonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04338B26049D4C003E5995 /* BlackDragonFactory.m */; };
 		3B04339026049DB5003E5995 /* RedDragonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04338F26049DB5003E5995 /* RedDragonFactory.m */; };
 		3B0433942604A2A8003E5995 /* Coordinate+Publish.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433932604A2A8003E5995 /* Coordinate+Publish.m */; };
+		3B04339826082E1D003E5995 /* Coordinate+FirstPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04339726082E1D003E5995 /* Coordinate+FirstPage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,8 @@
 		3B04338F26049DB5003E5995 /* RedDragonFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedDragonFactory.m; sourceTree = "<group>"; };
 		3B0433922604A2A8003E5995 /* Coordinate+Publish.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Coordinate+Publish.h"; sourceTree = "<group>"; };
 		3B0433932604A2A8003E5995 /* Coordinate+Publish.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Coordinate+Publish.m"; sourceTree = "<group>"; };
+		3B04339626082E1D003E5995 /* Coordinate+FirstPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Coordinate+FirstPage.h"; sourceTree = "<group>"; };
+		3B04339726082E1D003E5995 /* Coordinate+FirstPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Coordinate+FirstPage.m"; sourceTree = "<group>"; };
 		87061971AF613EB03C64CF8C /* Pods-ArchitectureOCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArchitectureOCDemo.debug.xcconfig"; path = "Target Support Files/Pods-ArchitectureOCDemo/Pods-ArchitectureOCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		94790F5C7527858BE6D351AA /* Pods_ArchitectureOCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArchitectureOCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -306,6 +309,8 @@
 			children = (
 				3B043377260490CB003E5995 /* FirstPageVC.h */,
 				3B043378260490CB003E5995 /* FirstPageVC.m */,
+				3B04339626082E1D003E5995 /* Coordinate+FirstPage.h */,
+				3B04339726082E1D003E5995 /* Coordinate+FirstPage.m */,
 			);
 			path = FirstPage;
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 				3B04338C26049D4C003E5995 /* BlackDragonFactory.m in Sources */,
 				3B0433082602F1AC003E5995 /* ViewController.m in Sources */,
 				3B0433022602F1AC003E5995 /* AppDelegate.m in Sources */,
+				3B04339826082E1D003E5995 /* Coordinate+FirstPage.m in Sources */,
 				3B0433612604879F003E5995 /* VCGeneratorCom.m in Sources */,
 				3B0433942604A2A8003E5995 /* Coordinate+Publish.m in Sources */,
 				3B043375260490BA003E5995 /* StateVC.m in Sources */,
