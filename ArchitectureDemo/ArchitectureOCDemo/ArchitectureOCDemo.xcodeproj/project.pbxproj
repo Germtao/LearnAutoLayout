@@ -10,7 +10,6 @@
 		131370387BE75153DFE6239C /* Pods_ArchitectureOCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94790F5C7527858BE6D351AA /* Pods_ArchitectureOCDemo.framework */; };
 		3B0433022602F1AC003E5995 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433012602F1AC003E5995 /* AppDelegate.m */; };
 		3B0433052602F1AC003E5995 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433042602F1AC003E5995 /* SceneDelegate.m */; };
-		3B0433082602F1AC003E5995 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0433072602F1AC003E5995 /* ViewController.m */; };
 		3B04330B2602F1AC003E5995 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0433092602F1AC003E5995 /* Main.storyboard */; };
 		3B04330D2602F1B1003E5995 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B04330C2602F1B1003E5995 /* Assets.xcassets */; };
 		3B0433102602F1B1003E5995 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B04330E2602F1B1003E5995 /* LaunchScreen.storyboard */; };
@@ -53,8 +52,6 @@
 		3B0433012602F1AC003E5995 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3B0433032602F1AC003E5995 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		3B0433042602F1AC003E5995 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		3B0433062602F1AC003E5995 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3B0433072602F1AC003E5995 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3B04330A2602F1AC003E5995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B04330C2602F1B1003E5995 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B04330F2602F1B1003E5995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -169,8 +166,6 @@
 				3B0433012602F1AC003E5995 /* AppDelegate.m */,
 				3B0433032602F1AC003E5995 /* SceneDelegate.h */,
 				3B0433042602F1AC003E5995 /* SceneDelegate.m */,
-				3B0433062602F1AC003E5995 /* ViewController.h */,
-				3B0433072602F1AC003E5995 /* ViewController.m */,
 				3B0433092602F1AC003E5995 /* Main.storyboard */,
 				3B04330C2602F1B1003E5995 /* Assets.xcassets */,
 				3B04330E2602F1B1003E5995 /* LaunchScreen.storyboard */,
@@ -506,7 +501,6 @@
 				3B0433A72608410F003E5995 /* BlackFieryDragonAbility.m in Sources */,
 				3B04333326044A5F003E5995 /* ButtonCom.m in Sources */,
 				3B04338C26049D4C003E5995 /* BlackDragonFactory.m in Sources */,
-				3B0433082602F1AC003E5995 /* ViewController.m in Sources */,
 				3B0433022602F1AC003E5995 /* AppDelegate.m in Sources */,
 				3B04339826082E1D003E5995 /* Coordinate+FirstPage.m in Sources */,
 				3B0433BB26084668003E5995 /* DragonHurtState.m in Sources */,

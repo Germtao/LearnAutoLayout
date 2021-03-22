@@ -5,7 +5,7 @@
 //  Created by QDSG on 2021/3/22.
 //
 
-#import "RedFieryDragon.h"
+#import "RedFieryDragonAbility.h"
 
 @implementation RedFieryDragonAbility
 

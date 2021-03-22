@@ -41,7 +41,7 @@
     
     self.dispatch(CoordinateAction.classMethodIs(@"FirstListCom simRequest").parametersIs(Dic.create.key(@"action").value(^(void) {
         NSLog(@"first view in vc current state = %@", self.currentState);
-    }).done))
+    }).done));
 }
 
 - (void)firstViewAppear {
