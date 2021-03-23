@@ -12,9 +12,12 @@
 @implementation UITableView (hook)
 
 + (void)load {
-    SEL fromSelectorDelegate = @selector(setDelegate:);
-    SEL toSelectorDelegate = @selector(hook_setDelegate:);
-    [TTHook hookClass:self fromSelector:fromSelectorDelegate toSelector:toSelectorDelegate];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        SEL fromSelectorDelegate = @selector(setDelegate:);
+        SEL toSelectorDelegate = @selector(hook_setDelegate:);
+        [TTHook hookClass:self fromSelector:fromSelectorDelegate toSelector:toSelectorDelegate];
+    });
 }
 
 #pragma mark - toSelector
