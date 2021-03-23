@@ -17,6 +17,7 @@
 		3B0434C72609C212003E5995 /* TTHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0434C62609C212003E5995 /* TTHook.m */; };
 		3B0434CC2609CC98003E5995 /* UIViewController+Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0434CB2609CC98003E5995 /* UIViewController+Logger.m */; };
 		3B0434D02609D3FB003E5995 /* UIButton+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0434CF2609D3FB003E5995 /* UIButton+hook.m */; };
+		3B0434D42609DD71003E5995 /* UITableView+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0434D32609DD71003E5995 /* UITableView+hook.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		3B0434CB2609CC98003E5995 /* UIViewController+Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Logger.m"; sourceTree = "<group>"; };
 		3B0434CE2609D3FB003E5995 /* UIButton+hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+hook.h"; sourceTree = "<group>"; };
 		3B0434CF2609D3FB003E5995 /* UIButton+hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+hook.m"; sourceTree = "<group>"; };
+		3B0434D22609DD71003E5995 /* UITableView+hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+hook.h"; sourceTree = "<group>"; };
+		3B0434D32609DD71003E5995 /* UITableView+hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+hook.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				3B0434CB2609CC98003E5995 /* UIViewController+Logger.m */,
 				3B0434CE2609D3FB003E5995 /* UIButton+hook.h */,
 				3B0434CF2609D3FB003E5995 /* UIButton+hook.m */,
+				3B0434D22609DD71003E5995 /* UITableView+hook.h */,
+				3B0434D32609DD71003E5995 /* UITableView+hook.m */,
 			);
 			path = Hook;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 			files = (
 				3B0434B22609C155003E5995 /* ViewController.m in Sources */,
 				3B0434D02609D3FB003E5995 /* UIButton+hook.m in Sources */,
+				3B0434D42609DD71003E5995 /* UITableView+hook.m in Sources */,
 				3B0434AC2609C155003E5995 /* AppDelegate.m in Sources */,
 				3B0434CC2609CC98003E5995 /* UIViewController+Logger.m in Sources */,
 				3B0434BD2609C15C003E5995 /* main.m in Sources */,

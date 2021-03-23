@@ -17,20 +17,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npR-id-AIv">
-                                <rect key="frame" x="176" y="433" width="62" height="30"/>
+                                <rect key="frame" x="176" y="54" width="62" height="30"/>
                                 <state key="normal" title="日志埋点"/>
                                 <connections>
                                     <action selector="senderbuttonHookAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p5H-Yw-0t5"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="CBy-IT-Hsx">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="npR-id-AIv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fvp-NX-bgF"/>
+                            <constraint firstItem="npR-id-AIv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="5bT-cD-fm5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CBy-IT-Hsx" secondAttribute="trailing" id="CcF-Qr-8nL"/>
+                            <constraint firstItem="CBy-IT-Hsx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xlu-n1-AyM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CBy-IT-Hsx" secondAttribute="bottom" id="deD-tS-wlE"/>
+                            <constraint firstItem="CBy-IT-Hsx" firstAttribute="top" secondItem="npR-id-AIv" secondAttribute="bottom" constant="10" id="hL1-Ye-bcz"/>
                             <constraint firstItem="npR-id-AIv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nkT-Oz-tAX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="CBy-IT-Hsx" id="lkK-ZI-iPY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
